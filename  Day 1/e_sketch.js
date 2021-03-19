@@ -10,17 +10,16 @@ function draw(){
 	strokeWeight(100);
 	strokeCap(ROUND);
 
-		line(200,200,200,800);
-	for (var i = 200;i<900;i+=300){
-		line(200,i,800,i);
-	}
-	// strokeCap(ROUND);
-	// line(200,200,800,200); //line (x1,y1,x2,y2)
-	// strokeCap(Round);
-	// line(200,400,600,200)；
-	// strokeCap(Round);
+	line(200,200,200,800);
+	line(200,200,700,200);
+	line(200,500,550,500);
+	line(200,800,700,800);
+
+
 	// line(200,200,200,800);
-}
+	// for (var i = 200;i<900;i+=300){
+	// 	line(200,i,800,i);
+	}
 
 // function mousePressed(){
 // 	saveCanvas("sketch_01","png")
