@@ -20,6 +20,6 @@ function draw(){
 
 }
 
-function mousePressed(){
-
-}
+// function mousePressed(){
+// 	saveCanvas("sketch_01","png")
+// }
