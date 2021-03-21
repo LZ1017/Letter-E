@@ -19,3 +19,7 @@ function draw() {
 	box(45,345,45);
 
 }
+
+// function mousePressed(){
+// 	saveCanvas("sketch_01","png")
+// }
