@@ -25,3 +25,7 @@ function draw() {
 	}
 
 }
+
+// function mousePressed(){
+// 	saveCanvas("sketch_01","png")
+// }
