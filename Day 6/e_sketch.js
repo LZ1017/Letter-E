@@ -14,6 +14,7 @@ function setup(){
 		sampleFactor:0.9,
 
 	simplifyThreshold:0});
+
 }
 
 function ns(x,y,z,scale,min,max){
