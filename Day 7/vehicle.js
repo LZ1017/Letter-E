@@ -5,7 +5,7 @@ function Vehicle(x,y){
 	this.acc = createVector();
 	this.r = 8;
 	this.maxspeed = 10;
-	this.maxforce = 1;
+	this.maxforce = 3;
 }
 
 Vehicle.prototype.behaviors = function(){ 
