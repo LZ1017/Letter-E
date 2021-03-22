@@ -1,5 +1,5 @@
 let font;
-let pts;
+let points;
 
 function preload(){
 	font = loadFont("Bubblegum.ttf");
@@ -8,7 +8,7 @@ function preload(){
 function setup(){
 	createCanvas(1000,1000);
 
-	pts = font.textToPoints('E', 200,600,1000,
+	points = font.textToPoints('E', 200,600,1000,
 
 	{
 		sampleFactor:0.9,
@@ -33,10 +33,10 @@ function draw(){
 	fill(random(255));
 	push();
 	translate(75, 275);
-	for (let i = 0; i < pts.length; i++) {
-		let xoff = ns(pts[i].x, pts[i].y, xz, 0.005, -50, 50);
-		let yoff = ns(pts[i].y, pts[i].x, yz, 0.005, -50, 50);
-		ellipse(pts[i].x + xoff, pts[i].y + yoff, 5, 5);
+	for (let i = 0; i < points.length; i++) {
+		let xoff = ns(points[i].x, points[i].y, xz, 0.005, -50, 50);
+		let yoff = ns(points[i].y, points[i].x, yz, 0.005, -50, 50);
+		ellipse(points[i].x + xoff, points[i].y + yoff, 5, 5);
 	}
 	pop();
 	xz += 2;
