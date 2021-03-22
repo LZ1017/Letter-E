@@ -1,5 +1,6 @@
-let font;
-let pts;
+var font;
+var points;
+var vehicles = [];
 
 function preload(){
 	font = loadFont("Bubblegum.ttf");
@@ -7,40 +8,35 @@ function preload(){
 
 function setup(){
 	createCanvas(1000,1000);
-
-	pts = font.textToPoints('E', 200,600,1000,
-
-	{
-		sampleFactor:0.9,
-
-	simplifyThreshold:0});
-
-}
-
-function ns(x,y,z,scale,min,max){
-	return map(
-		noise(x*scale,y*scale,z*scale),
-		0,1,min,max)
+	background(0)
+	// textFont(font);
+	// textSize(800);
+	// fill(255)
+	// noStroke();
+	// text('E',300,800);
 	
-}
+	points = font.textToPoints ('E',300,800,800);
 
-let xz=0;
-let yz=1000;
+	for(var i = 0; i <points.length;i+=3){//distance between each dot
+		var pt = points[i];
+		var vehicle = new Vehicle(pt.x,pt.y);
+		vehicles.push(vehicle);
+		// stroke(255);
+		// strokeWeight(20);
+		// point(pt.x,pt.y);
+
+
+	}
+}
 
 function draw(){
-	background(0);
-	noStroke();
-	fill(random(255));
-	push();
-	translate(75, 275);
-	for (let i = 0; i < pts.length; i++) {
-		let xoff = ns(pts[i].x, pts[i].y, xz, 0.005, -50, 50);
-		let yoff = ns(pts[i].y, pts[i].x, yz, 0.005, -50, 50);
-		ellipse(pts[i].x + xoff, pts[i].y + yoff, 5, 5);
+	background(51);
+	for (var i = 0; i <vehicles.length;i++){
+		var v = vehicles[i];
+		v.behaviors();
+		v.update();
+		v.show();
 	}
-	pop();
-	xz += 2;
-	yz += 2;
 }
 
 function mousePressed(){
