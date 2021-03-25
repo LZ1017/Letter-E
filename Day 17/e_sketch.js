@@ -1,9 +1,9 @@
-var font
+// var font
 
 var img
 
 function preload(){
-  font = loadFont("Bubblegum.ttf");
+  // font = loadFont("Bubblegum.ttf");
   img = loadImage("e.png");
 }
 
@@ -11,15 +11,12 @@ function preload(){
 function setup(){
   createCanvas(1000,1000);
   background(255);
-  textFont(font);
-  textSize(800);
+  // textFont(font);
+  // textSize(800);
   textAlign(CENTER,CENTER);
   fill(0);
-  text('E',200,450,800);
+  // text('E',200,450,800);
   image (img,100,0)
-
-
-
 }
 
 function draw(){
@@ -33,6 +30,6 @@ function draw(){
 
 }
 
-// function mousePressed(){
-//   saveCanvas("sketch_01","png")
-// }
+function mousePressed(){
+  saveCanvas("sketch_01","png")
+}
