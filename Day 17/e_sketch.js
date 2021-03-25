@@ -1,47 +1,38 @@
-let font;
-let a = 0;
-let s = 0;
+var font
 
-// function preload(){
-//     font = loadFont('Bubblegum.ttf')
-// }
+var img
+
+function preload(){
+  font = loadFont("Bubblegum.ttf");
+  img = loadImage("e.png");
+}
+
 
 function setup(){
   createCanvas(1000,1000);
   background(255);
-  textFont('Arial');
-  textSize(300);
-  textAlign(CENTER);
-  strokeWeight(2)
+  textFont(font);
+  textSize(800);
+  textAlign(CENTER,CENTER);
+  fill(0);
+  text('E',200,450,800);
+  image (img,100,0)
+
 
 
 }
 
 function draw(){
-  a = a +5;
-  s = cos(a) * 1;
-
-  translate (width/2,height/2);
-  scale(s);
-  stroke(0);
-  noFill();
-  text('E', 0,0,300);
-
-  translate (200,250);
-  stroke(255,0,0);
-  noFill();
-  // scale(s);
-  text('e',0,0 ,300)
-
-  translate (200,250);
-
-  stroke(255,0,255);
-  noFill();
-  scale(random(50));
-  text('E',-800,-100,400)
+  var x1 = random(0,width);
+  var y1 = 0;
+  var x2 = round (x1 + random (-100,10));
+  var y2 = round (random(-10,50));
+  var w = random(50,50);
+  var h = height;
+  copy (img, x1,y1,w,h,x2,y2,w,h);
 
 }
 
-function mousePressed(){
-  saveCanvas("sketch_01","png")
-}
+// function mousePressed(){
+//   saveCanvas("sketch_01","png")
+// }
