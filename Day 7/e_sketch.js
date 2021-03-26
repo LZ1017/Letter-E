@@ -9,6 +9,11 @@ function preload(){
 function setup(){
 	createCanvas(1000,1000);
 	background(0)
+
+	frameRate(10)
+	createLoop({
+		duration:20, gif:true
+	})
 	// textFont(font);
 	// textSize(800);
 	// fill(255)
@@ -25,10 +30,7 @@ function setup(){
 		// strokeWeight(20);
 		// point(pt.x,pt.y);
 
-	frameRate(40)
-	createLoop({
-		duration:5, gif:true
-	})
+	
 
 
 	}

@@ -7,7 +7,13 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(1000, 1000);
+   createCanvas(1000, 1000)
+    background(0)
+
+    frameRate(10)
+  createLoop({
+    duration:5, gif:true
+  })
 
   points = font.textToPoints(
     'E', 0, 0, 800, {

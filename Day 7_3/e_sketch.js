@@ -9,11 +9,17 @@ function preload() {
 
 function setup() {
   createCanvas(1000, 1000)
+    background(0)
+
+    frameRate(10)
+  createLoop({
+    duration:5, gif:true
+  })
   noStroke()
 }
 
 function draw() {
-  background(0)
+
   points = font.textToPoints(text[index], 0,0, 800)
 
   translate(300, 800)

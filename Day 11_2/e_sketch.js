@@ -8,6 +8,11 @@ function preload() {
 
 function setup() {
     createCanvas(1000, 1000)
+    frameRate(20)
+  createLoop({
+    duration:10, gif:true
+  })
+    
     
     //create textToPoint!!!
     textFont(font)

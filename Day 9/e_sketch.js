@@ -5,9 +5,14 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(1000, 1000)
+    background(0)
 
-  background(0);
+    frameRate(5)
+  createLoop({
+    duration:5, gif:true
+  })
+
   fill(255);
   noStroke();
   

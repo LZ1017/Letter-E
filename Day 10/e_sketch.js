@@ -8,6 +8,12 @@ function setup() {
   createCanvas(1000, 1000);
 
   background(0);
+
+  frameRate(20)
+  createLoop({
+    duration:10, gif:true
+  })
+
   fill(255);
   noStroke();
   
