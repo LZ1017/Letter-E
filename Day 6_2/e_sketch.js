@@ -7,6 +7,12 @@ function preload(){
 
 function setup(){
 	createCanvas(1000,1000);
+
+
+	frameRate(30)
+	createLoop({
+		duration:11, gif:true
+	})
 }
 
 

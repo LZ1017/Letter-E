@@ -25,6 +25,11 @@ function setup(){
 		// strokeWeight(20);
 		// point(pt.x,pt.y);
 
+	frameRate(40)
+	createLoop({
+		duration:5, gif:true
+	})
+
 
 	}
 }

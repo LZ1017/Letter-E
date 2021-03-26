@@ -4,6 +4,11 @@ let gird = 5;
 
 function preload(){
     font = loadFont('Bubblegum.ttf')
+
+        frameRate(30)
+    createLoop({
+        duration:11, gif:true
+    })
 }
 
 function setup(){
