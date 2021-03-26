@@ -28,6 +28,6 @@ function draw(){
 
 }
 
-// function mousePressed(){
-// 	saveCanvas("sketch_01","png")
-// }
+function mousePressed(){
+	saveCanvas("sketch_03_2","png")
+}
