@@ -14,6 +14,11 @@ function setup() {
   createCanvas(1000, 1000)
   textAlign(CENTER,CENTER)
 
+  frameRate(20)
+    createLoop({
+        duration:5, gif:true
+  })
+
   tiles = 30
   tileSize = width / tiles
   

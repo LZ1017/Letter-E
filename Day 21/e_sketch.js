@@ -12,9 +12,9 @@ function setup() {
   background(255)
 
 
-   frameRate(40)
+   frameRate(30)
     createLoop({
-        duration:5, gif:true
+        duration:3, gif:true
   })
   
   // create offscreen graphics buffer

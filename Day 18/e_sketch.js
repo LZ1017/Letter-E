@@ -10,7 +10,7 @@ function setup () {
   createCanvas(1000, 1000)
 
 
-   frameRate(20)
+   frameRate(30)
     createLoop({
         duration:10, gif:true
   })
