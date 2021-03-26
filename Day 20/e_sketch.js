@@ -1,43 +1,54 @@
-let img
+let font
 let tiles
 let tileSize
-let points = [] 
-let loopDuration = 4 * 60
+let loopDuration = 2 * 60
 
 function preload() {
-  img = loadImage('e.png')
+  font = loadFont('Bubblegum.ttf')
 }
 
 function setup() {
-  createCanvas(900, 1000)
-  rectMode(CENTER)
+  createCanvas(1000, 1000)
+  noStroke()
   
-  fill(150)
+  points = font.textToPoints('E', width / 3.8, height / 1.25, 800, {
+    sampleFactor: 0.5,
+    simplifyThreshold: 0
+  })
 
-  tiles = 40
+  tiles = 20
   tileSize = width / tiles
-  
-  for (let y = 0; y < height + tileSize * 2; y += tileSize) {
-    for (let x = 0; x < width + tileSize * 2; x += tileSize) {
-      let c = img.get(x, y)
-      let b = map(brightness(c), 50, 100, 5, 30)
-      fill(200)
-      if (brightness(c) > 1) {
-        points.push({x: x, y: y, b: b})
-      }
-    }
-  }
 }
-function draw() {
 
-  background(0, 60)
+function draw() {
+  let currentFrame = frameCount % loopDuration
+  let t = currentFrame / loopDuration
+  let u = map((t), 0, 1, 0, PI)
   
-  fill(200)
+  background(0, 50)
+
   points.forEach(point => {
-    ellipse(point.x , point.y , point.b)
+    push()
+    translate(point.x, point.y)
+    rotate(u)
+
+    fill('#F6D55C')
+    ellipse(-6 * sin(u), -6 * sin(u), 40 + 400 * sin(u), 3)
+    
+    fill('#3CAEA3')
+    ellipse(-8 * sin(u), -8 * sin(u), 40 + 300 * sin(u), 3)
+    
+    fill('#20639B')
+    ellipse(0 * sin(u), 0 * sin(u), 40 + 200 * sin(u), 3)
+    
+    fill('#173F5F')
+    ellipse(8 * sin(u), 8 * sin(u), 40 + 300 * sin(u), 3)
+    
+    fill('#ED553B')
+    ellipse(6 * sin(u), 6 * sin(u), 40 + 400 * sin(u), 3)
+    pop()
   })
 }
-
 
 function mousePressed(){
   saveCanvas("sketch_01","png")
