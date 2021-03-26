@@ -13,7 +13,7 @@ function setup() {
 
    frameRate(10)
     createLoop({
-        duration:8, gif:true
+        duration:3, gif:true
   })
   noStroke()
   

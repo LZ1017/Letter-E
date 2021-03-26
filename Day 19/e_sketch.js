@@ -11,7 +11,7 @@ function preload() {
 function setup() {
   createCanvas(900, 1000)
 
-  frameRate(40)
+  frameRate(30)
   createLoop({
     duration:10, gif:true
   })

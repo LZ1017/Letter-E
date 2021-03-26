@@ -12,6 +12,12 @@ function preload() {
 
 function setup() {
   createCanvas(1000, 1000)
+
+   frameRate(40)
+    createLoop({
+        duration:5, gif:true
+  })
+    
   textAlign(CENTER,CENTER)
 
   tiles = 100

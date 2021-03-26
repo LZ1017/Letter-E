@@ -10,9 +10,9 @@ function setup () {
   createCanvas(1000, 1000)
 
 
-   frameRate(40)
+   frameRate(20)
     createLoop({
-        duration:15, gif:true
+        duration:10, gif:true
   })
 
   points = font.textToPoints('e', 200, 0, 800, {

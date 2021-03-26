@@ -11,10 +11,10 @@ function setup() {
   createCanvas(1000, 1000)
   background(255)
 
-  
+
    frameRate(40)
     createLoop({
-        duration:15, gif:true
+        duration:5, gif:true
   })
   
   // create offscreen graphics buffer
