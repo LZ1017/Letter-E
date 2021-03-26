@@ -1,11 +1,15 @@
 function setup() {
 	createCanvas(500, 500, WEBGL);
+	background(0);
+	frameRate(3)
+	createLoop({
+		duration:4, gif:true
+	})
 }
 
 function draw() {
-	background(0);
-	stroke(200);
-	fill(240, 150, 150);
+	stroke(240, 150, 150);
+	noFill();
 	rotateX(millis() / 1000);
 	rotateY(radians(mouseY));
 	translate(0, -150);
