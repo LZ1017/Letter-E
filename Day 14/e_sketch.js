@@ -7,6 +7,12 @@ function preload(){
 function setup(){
     createCanvas(1000,1000);
     background(255);
+
+    frameRate(5)
+    createLoop({
+        duration:5, gif:true
+  })
+
     stroke(0);
     strokeWeight(10);
     noFill();

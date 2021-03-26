@@ -11,6 +11,12 @@ function preload(){
 function setup(){
   createCanvas(1000,1000);
   background(255);
+
+   frameRate(20)
+    createLoop({
+        duration:10, gif:true
+  })
+    
   // textFont(font);
   // textSize(800);
   textAlign(CENTER,CENTER);

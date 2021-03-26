@@ -7,6 +7,7 @@ function preload(){
 function setup(){
   createCanvas(1000,1000);
   background(255);
+
   stroke(255,0,255);
   noFill();
   textFont(font);

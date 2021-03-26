@@ -10,6 +10,12 @@ function preload() {
 
 function setup() {
   createCanvas(900, 1000)
+
+  frameRate(40)
+  createLoop({
+    duration:10, gif:true
+  })
+  
   rectMode(CENTER)
   
   fill(150)
