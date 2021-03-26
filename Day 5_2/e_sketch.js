@@ -2,7 +2,11 @@ function setup() {
 	createCanvas(1000,1000);
 	background(240);
 
-	noLoop();
+
+	frameRate(20)
+	createLoop({
+		duration:3, gif:true
+	})
 }
 
 function draw() {
